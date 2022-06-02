@@ -1,10 +1,15 @@
 package com.launcher;
 
-public class TC_003 {
+public class TC_003 extends BaseTest
+{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) throws Exception 
+	{
+		init();
+		
+		launch("chromebrowser");
+		
+		navigateUrl("amazonurl");
 	}
 
 }

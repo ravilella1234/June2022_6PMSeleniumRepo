@@ -8,11 +8,11 @@ public class TC_005 extends BaseTest
 
 		init();
 		
-		launch("firefoxbrowser");
+		launch("chromebrowser");
 		
-		navigateUrl("cerificateurl");
+		navigateUrl("iciciurl");
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 	}
 
 }

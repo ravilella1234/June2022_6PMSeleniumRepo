@@ -5,6 +5,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -49,7 +50,16 @@ public class BaseTest
 		if(p.getProperty(browser).equals("chrome")) 
 		{
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("user-data-dir=C:\\Users\\ravi\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 16");
+			option.addArguments("--disable-notifications");
+			option.addArguments("--start-maximized");
+			option.addArguments("--proxy-server=https://192.168.10.1:9090");
+			option.addArguments("--ignore-certificate-errors-spki-list");
+			
+			
+			driver = new ChromeDriver(option);
 		}
 		else if(p.getProperty(browser).equals("firefox")) 
 		{

@@ -1,0 +1,1 @@
+InetGet ( "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/selenium-server-4.2.2.jar", "C:\Users\ravi\Desktop\Screenshots\selenium-server")

@@ -1,0 +1,12 @@
+init the properties files...
+Opening Browser :chrome
+Navigate to Url : https://www.amazon.in
+Selecting the option Books By using locator : searchDropdownBox
+Enter the text Harryn potter by using the locator :field-keywords
+Click on Element By using locator : nav-search-submit-button
+init the properties files...
+Opening Browser :chrome
+Navigate to Url : https://www.amazon.in
+Selecting the option Books By using locator : searchDropdownBox
+Enter the text Harryn potter by using the locator :field-keywords
+Click on Element By using locator : nav-search-submit-button

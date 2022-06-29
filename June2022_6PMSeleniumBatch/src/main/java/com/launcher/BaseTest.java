@@ -1,8 +1,10 @@
 package com.launcher;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +17,9 @@ import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest 
@@ -26,6 +31,8 @@ public class BaseTest
 	public static Properties mainProp;
 	public static Properties childProp;
 	public static Properties orProp;
+	public static ExtentReports rep;
+	public static ExtentTest test;
 	
 	public static void init() throws Exception
 	{
@@ -52,6 +59,12 @@ public class BaseTest
 		fis = new FileInputStream(projectPath+"\\src\\main\\resources\\or.properties");
 		orProp = new Properties();
 		orProp.load(fis);
+		
+		fis = new FileInputStream(projectPath+"\\src\\main\\resources\\log4jconfig.properties");
+		PropertyConfigurator.configure(fis);
+		
+		rep = ExtentManager.getInstance();
+		
 	}
 	
 	public static void launch(String browser)
@@ -154,7 +167,7 @@ public class BaseTest
 	{
 		System.out.println("Checking for Element presence :" + locatorKey);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
 		try
 		{

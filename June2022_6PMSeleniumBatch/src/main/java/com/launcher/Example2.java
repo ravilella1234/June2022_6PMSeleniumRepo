@@ -25,7 +25,9 @@ public class Example2
 		for(int i=0;i<months.size();i++)
 		{
 			if(!months.get(i).getText().contains(month))
-				driver.
+			{
+				
+			}
 		}
 
 	}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="AutomationTest(failed)">
+    <classes>
+      <class name="testng.CheckBox1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="checkboxTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testng.CheckBox1 -->
+    </classes>
+  </test> <!-- AutomationTest(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->

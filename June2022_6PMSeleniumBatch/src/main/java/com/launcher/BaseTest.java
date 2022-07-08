@@ -70,12 +70,11 @@ public class BaseTest
 		PropertyConfigurator.configure(fis);
 		
 		rep = ExtentManager.getInstance();
-		
 	}
 	
 	public static void launch(String browser)
 	{
-		if(p.getProperty(browser).equals("chrome")) 
+		if(browser.equals("chrome")) 
 		{
 			WebDriverManager.chromedriver().setup();
 			
@@ -89,7 +88,7 @@ public class BaseTest
 			
 			driver = new ChromeDriver(option);
 		}
-		else if(p.getProperty(browser).equals("firefox")) 
+		else if(browser.equals("firefox")) 
 		{
 			WebDriverManager.firefoxdriver().setup();
 			
@@ -113,6 +112,8 @@ public class BaseTest
 			
 			driver = new FirefoxDriver(option);
 		}
+		
+		driver.manage().timeouts().getPageLoadTimeout();
 	}
 	
 	public static void navigateUrl(String url)

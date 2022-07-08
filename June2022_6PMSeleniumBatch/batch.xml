@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationSuite">
+
+  <parameter name="browser" value="chrome"></parameter>
+  <test thread-count="5" name="AutomationTest">
+    <classes>
+      <!--  <class name="testng.RadioButton1"/>-->
+      <class name="testng.CheckBox1"/>
+      <class name="testng.TNG_003"/>
+      <class name="testng.LinksTesting1"/>
+    </classes>
+  </test> <!-- AutomationTest -->
+</suite> <!-- AutomationSuite -->

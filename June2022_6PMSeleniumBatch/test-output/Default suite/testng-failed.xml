@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.TNG_003">
+      <class name="testng.TestDependency">
         <methods>
-          <include name="endProcess"/>
-          <include name="startProcess"/>
-          <include name="amazonTest"/>
+          <include name="white"/>
+          <include name="green"/>
+          <include name="blue"/>
+          <include name="orange"/>
         </methods>
-      </class> <!-- testng.TNG_003 -->
+      </class> <!-- testng.TestDependency -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

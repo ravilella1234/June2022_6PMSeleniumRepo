@@ -12,7 +12,7 @@ import org.testng.annotations.AfterMethod;
 public class TNG_003 extends BaseTest
 {
   
-  @BeforeMethod
+  @BeforeMethod(groups = {"regression"})
   @Parameters("browser")
   public void startProcess(String bType) throws Exception 
   {
@@ -32,7 +32,7 @@ public class TNG_003 extends BaseTest
 		
   }
   
-  @Test
+  @Test(groups = {"regression"})
   public void amazonTest() 
   {
 	  System.out.println("Stating amazonTest");
@@ -46,7 +46,7 @@ public class TNG_003 extends BaseTest
 		test.log(Status.INFO, "Click on Element By using locator : " + orProp.getProperty("amazonsearchbutton_id"));
   }
 
-  @AfterMethod
+  @AfterMethod(groups = {"regression"})
   public void endProcess() 
   {
 	  System.out.println("Ending AfterMethod");

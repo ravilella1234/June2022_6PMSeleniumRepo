@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -39,6 +40,13 @@ public class BaseTest
 	public static Properties orProp;
 	public static ExtentReports rep;
 	public static ExtentTest test;
+	public static String filePath;
+	
+	static
+	{
+		Date d = new Date();
+		filePath  = d.toString().replace(':', '_').replace(' ','_');
+	}
 	
 	public static void init() throws Exception
 	{
@@ -114,6 +122,7 @@ public class BaseTest
 		}
 		
 		driver.manage().timeouts().getPageLoadTimeout();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
 	public static void navigateUrl(String url)

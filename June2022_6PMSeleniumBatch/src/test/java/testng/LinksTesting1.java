@@ -16,7 +16,7 @@ import com.launcher.BaseTest;
 public class LinksTesting1 extends BaseTest
 {
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"regression","sanity"})
 	@Parameters("browser")
 	public void setup(String bType) throws Exception
 	{
@@ -33,7 +33,7 @@ public class LinksTesting1 extends BaseTest
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression","sanity"})
 	public void linktesting1()
 	
 	 {
@@ -47,7 +47,7 @@ public class LinksTesting1 extends BaseTest
 		
 	 }
 	
-	@AfterMethod
+	@AfterMethod(groups = {"regression","sanity"})
 	public void tearDown()
 	{
 		 System.out.println("endProcess");

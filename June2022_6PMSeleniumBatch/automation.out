@@ -10,3 +10,5 @@ Navigate to Url : https://www.amazon.in
 Selecting the option Books By using locator : searchDropdownBox
 Enter the text Harryn potter by using the locator :field-keywords
 Click on Element By using locator : nav-search-submit-button
+Retrying test amazonTest with status FAILURE for the 1 time(s).
+Retrying test amazonTest with status FAILURE for the 2 time(s).

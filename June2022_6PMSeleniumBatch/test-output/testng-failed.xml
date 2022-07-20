@@ -2,19 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
-  <listeners>
-    <listener class-name="testngListners.Listner"/>
-    <listener class-name="testngListners.RetryListener"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testng.TNG_003">
+      <class name="assertions.SoftAssertDemo">
         <methods>
-          <include name="endProcess"/>
-          <include name="startProcess"/>
-          <include name="amazonTest"/>
+          <include name="afterMethod"/>
+          <include name="f"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- testng.TNG_003 -->
+      </class> <!-- assertions.SoftAssertDemo -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

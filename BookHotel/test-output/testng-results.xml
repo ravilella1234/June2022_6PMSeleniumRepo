@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="18" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-21T13:28:03Z" name="Suite" finished-at="2022-07-21T13:28:04Z" duration-ms="571">
+    <groups>
+    </groups>
+    <test started-at="2022-07-21T13:28:03Z" name="Create New Booking Test - Pay@Hotel" finished-at="2022-07-21T13:28:03Z" duration-ms="265">
+      <class name="testcases.CustomerCommunication">
+        <test-method signature="checkEmailVerification(org.testng.ITestContext)[pri:0, instance:testcases.CustomerCommunication@2002fc1d]" started-at="2022-07-21T13:28:03Z" name="checkEmailVerification" finished-at="2022-07-21T13:28:03Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2fd1433e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailVerification -->
+        <test-method signature="checkMobileVerification(org.testng.ITestContext)[pri:0, instance:testcases.CustomerCommunication@2002fc1d]" started-at="2022-07-21T13:28:03Z" name="checkMobileVerification" finished-at="2022-07-21T13:28:03Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2fd1433e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMobileVerification -->
+      </class> <!-- testcases.CustomerCommunication -->
+      <class name="testcases.PaymentManager">
+        <test-method signature="applyDiscount()[pri:0, instance:testcases.PaymentManager@6200f9cb]" started-at="2022-07-21T13:28:03Z" name="applyDiscount" finished-at="2022-07-21T13:28:03Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyDiscount -->
+        <test-method signature="makePayment(java.lang.String, org.testng.ITestContext)[pri:0, instance:testcases.PaymentManager@6200f9cb]" started-at="2022-07-21T13:28:03Z" name="makePayment" finished-at="2022-07-21T13:28:03Z" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pay@Hotel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@2fd1433e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makePayment -->
+      </class> <!-- testcases.PaymentManager -->
+      <class name="testcases.Bookings">
+        <test-method signature="searchHotel()[pri:0, instance:testcases.Bookings@20d525]" started-at="2022-07-21T13:28:03Z" name="searchHotel" finished-at="2022-07-21T13:28:03Z" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method signature="typeORoom()[pri:0, instance:testcases.Bookings@20d525]" started-at="2022-07-21T13:28:03Z" name="typeORoom" finished-at="2022-07-21T13:28:03Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- typeORoom -->
+        <test-method signature="getInfo()[pri:0, instance:testcases.Bookings@20d525]" started-at="2022-07-21T13:28:03Z" name="getInfo" finished-at="2022-07-21T13:28:03Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInfo -->
+      </class> <!-- testcases.Bookings -->
+    </test> <!-- Create New Booking Test - Pay@Hotel -->
+    <test started-at="2022-07-21T13:28:04Z" name="Create New Booking Test - ElectonicMedia" finished-at="2022-07-21T13:28:04Z" duration-ms="91">
+      <class name="testcases.CustomerCommunication">
+        <test-method signature="checkEmailVerification(org.testng.ITestContext)[pri:0, instance:testcases.CustomerCommunication@2e377400]" started-at="2022-07-21T13:28:04Z" name="checkEmailVerification" finished-at="2022-07-21T13:28:04Z" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5d0a1059]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailVerification -->
+        <test-method signature="checkMobileVerification(org.testng.ITestContext)[pri:0, instance:testcases.CustomerCommunication@2e377400]" started-at="2022-07-21T13:28:04Z" name="checkMobileVerification" finished-at="2022-07-21T13:28:04Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5d0a1059]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMobileVerification -->
+      </class> <!-- testcases.CustomerCommunication -->
+      <class name="testcases.PaymentManager">
+        <test-method signature="applyDiscount()[pri:0, instance:testcases.PaymentManager@561b6512]" started-at="2022-07-21T13:28:04Z" name="applyDiscount" finished-at="2022-07-21T13:28:04Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyDiscount -->
+        <test-method signature="makePayment(java.lang.String, org.testng.ITestContext)[pri:0, instance:testcases.PaymentManager@561b6512]" started-at="2022-07-21T13:28:04Z" name="makePayment" finished-at="2022-07-21T13:28:04Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ElectonicMedia]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5d0a1059]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makePayment -->
+      </class> <!-- testcases.PaymentManager -->
+      <class name="testcases.Bookings">
+        <test-method signature="searchHotel()[pri:0, instance:testcases.Bookings@7494f96a]" started-at="2022-07-21T13:28:04Z" name="searchHotel" finished-at="2022-07-21T13:28:04Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method signature="typeORoom()[pri:0, instance:testcases.Bookings@7494f96a]" started-at="2022-07-21T13:28:04Z" name="typeORoom" finished-at="2022-07-21T13:28:04Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- typeORoom -->
+        <test-method signature="getInfo()[pri:0, instance:testcases.Bookings@7494f96a]" started-at="2022-07-21T13:28:04Z" name="getInfo" finished-at="2022-07-21T13:28:04Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInfo -->
+      </class> <!-- testcases.Bookings -->
+    </test> <!-- Create New Booking Test - ElectonicMedia -->
+  </suite> <!-- Suite -->
+</testng-results>

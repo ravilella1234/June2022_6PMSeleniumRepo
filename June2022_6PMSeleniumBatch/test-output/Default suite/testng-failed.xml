@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assertions.SoftAssertDemo">
+      <class name="excelDataDriven.DataManagementFinalReview">
         <methods>
-          <include name="afterMethod"/>
-          <include name="f"/>
-          <include name="beforeMethod"/>
+          <include name="f" invocation-numbers="1"/>
         </methods>
-      </class> <!-- assertions.SoftAssertDemo -->
+      </class> <!-- excelDataDriven.DataManagementFinalReview -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

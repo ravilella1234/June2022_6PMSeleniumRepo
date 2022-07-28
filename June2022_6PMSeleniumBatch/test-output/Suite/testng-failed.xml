@@ -4,13 +4,13 @@
   <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="assertions.SoftAssertDemo">
+      <class name="pom.POM_001">
         <methods>
-          <include name="afterMethod"/>
-          <include name="f"/>
-          <include name="beforeMethod"/>
+          <include name="loginTest"/>
+          <include name="endProcess"/>
+          <include name="startProcess"/>
         </methods>
-      </class> <!-- assertions.SoftAssertDemo -->
+      </class> <!-- pom.POM_001 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

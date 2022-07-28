@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="excelDataDriven.DataManagementFinalReview">
+      <class name="pom.POM_001">
         <methods>
-          <include name="f" invocation-numbers="1"/>
+          <include name="loginTest"/>
+          <include name="endProcess"/>
+          <include name="startProcess"/>
         </methods>
-      </class> <!-- excelDataDriven.DataManagementFinalReview -->
+      </class> <!-- pom.POM_001 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -14,6 +14,7 @@ public class POM_001 extends BaseTest
 {
 	
   LoginPage page;
+  CustomerRegistrationPage cp;
 	  
   @BeforeMethod
   @Parameters("browser")
@@ -33,12 +34,19 @@ public class POM_001 extends BaseTest
 	  
   }
 
-  @Test
+  @Test(enabled = false)
   public void loginTest() 
   {
 	  page = new LoginPage(driver);
 	  page.login();
 	  Assert.assertEquals(page.getLoginError(), "Authentication failed.");
+  }
+  
+  @Test
+  public void custReg() throws Exception
+  {
+	  cp = new CustomerRegistrationPage(driver);
+	  cp.customerRegistration();
   }
   
   @AfterMethod

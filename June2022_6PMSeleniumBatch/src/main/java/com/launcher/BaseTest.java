@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
@@ -21,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -122,7 +124,7 @@ public class BaseTest
 		}
 		
 		driver.manage().timeouts().getPageLoadTimeout();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
 	public static void navigateUrl(String url)
@@ -275,7 +277,28 @@ public class BaseTest
 		logInfo("Screenshot --->" +test.addScreenCaptureFromPath(projectPath+"//failurescreenshots//"+dateFormat));
 	}
 
+	public int rand() 
+	{
+		Random r = new Random();
+		int ran = r.nextInt(99999);
+		return ran;
+	}
 	
+	public void waitForElement(WebElement locator, int timeOutInSeconds, String waitAction) 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
+		if(waitAction.equals("elementToClick")) {
+			wait.until(ExpectedConditions.elementToBeClickable(locator));
+		}else if(waitAction.equals("elementToBeVisible")) {
+			wait.until(ExpectedConditions.visibilityOf(locator));
+		}		
+	}
+	
+	public void selectOption(WebElement dateLocator, int index) 
+	{
+		Select s = new Select(dateLocator);
+		s.selectByIndex(index);
+	}
 	
 	
 }

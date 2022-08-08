@@ -12,7 +12,7 @@ public class BaseTest
 	public ApplicationKeywords app;
  
   @BeforeTest
-  public void beforeTest(ITestContext context)
+  public void beforeTest(ITestContext context) throws Exception
   {
 	  System.out.println("beforeTest");
 	  app = new ApplicationKeywords();
@@ -26,10 +26,5 @@ public class BaseTest
 	 app=  (ApplicationKeywords)context.getAttribute("app");
   }
   
-  @AfterTest
-  public void afterTest()
-  {
-	  System.out.println("afterTest");
-  }
-
+  
 }

@@ -12,6 +12,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GenericKeywords
@@ -22,10 +25,12 @@ public class GenericKeywords
 	public Properties mainProp;
 	public Properties childProp;
 	public Properties orProp;
+	public ExtentTest test;
 	
 	public void openBrowser(String browserName)
 	{
-		System.out.println("Opening Browser : "+ childProp.getProperty(browserName));
+		log("Opening Browser : "+ childProp.getProperty(browserName));
+		//test.log(Status.INFO, "Opening Browser : "+ childProp.getProperty(browserName));
 		if(childProp.getProperty(browserName).equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -39,7 +44,8 @@ public class GenericKeywords
 	
 	public void navigate(String url)
 	{
-		System.out.println("Navigating to URL : " + childProp.getProperty(url));
+		log("Navigating to URL : " + childProp.getProperty(url));
+		//test.log(Status.INFO, "Navigating to URL : " + childProp.getProperty(url));
 		driver.get(childProp.getProperty(url));
 	}
 	
@@ -81,7 +87,8 @@ public class GenericKeywords
 
 	public  boolean isElementPresent(String locatorKey) 
 	{
-		System.out.println("Checking for Element presence :" + locatorKey);
+		log("Checking for Element presence :" + locatorKey);
+		//test.log(Status.INFO, "Checking for Element presence :" + locatorKey);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		
@@ -118,6 +125,17 @@ public class GenericKeywords
 		}
 		
 		return by;
+	}
+	
+	public void setReport(ExtentTest test)
+	{
+		this.test = test;
+	}
+	
+	//Reporting log info Function
+	public void log(String msg)
+	{
+		test.log(Status.INFO, msg);
 	}
 
 }

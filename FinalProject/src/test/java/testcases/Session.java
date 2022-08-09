@@ -2,6 +2,8 @@ package testcases;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import testbase.BaseTest;
 
 public class Session extends BaseTest
@@ -9,7 +11,7 @@ public class Session extends BaseTest
   @Test
   public void doLogin() 
   {
-	  System.out.println("doLogin");
+	  test.log(Status.INFO, "Logging In.....");
 	  app.openBrowser("chromebrowser");
 	  app.navigate("rediffurl");
 	  app.click("signin_xpath");
@@ -21,6 +23,7 @@ public class Session extends BaseTest
   @Test
   public void doLogout() 
   {
+	  test.log(Status.INFO, "Logging Out ....");
 	  System.out.println("doLogout");
   }
 }

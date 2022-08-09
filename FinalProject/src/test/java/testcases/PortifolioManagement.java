@@ -2,6 +2,8 @@ package testcases;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import testbase.BaseTest;
 
 public class PortifolioManagement extends BaseTest
@@ -11,6 +13,7 @@ public class PortifolioManagement extends BaseTest
   public void createProtifolio() 
   {
 	  System.out.println("createProtifolio");
+	  test.log(Status.INFO, "createProtifolio");
   }
   
   @Test

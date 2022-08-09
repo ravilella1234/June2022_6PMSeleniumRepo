@@ -8,6 +8,7 @@
           <include name="beforeMethod"/>
           <include name="beforeTest"/>
           <include name="doLogin"/>
+          <include name="quit"/>
         </methods>
       </class> <!-- testcases.Session -->
     </classes>

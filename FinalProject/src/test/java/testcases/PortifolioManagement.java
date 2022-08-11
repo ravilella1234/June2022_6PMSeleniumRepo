@@ -14,6 +14,10 @@ public class PortifolioManagement extends BaseTest
   {
 	  System.out.println("createProtifolio");
 	  test.log(Status.INFO, "createProtifolio");
+	  
+	  // report failure
+	  app.reportFailure("test failed",false);
+	  app.assertAll();
   }
   
   @Test

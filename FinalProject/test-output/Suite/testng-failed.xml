@@ -3,6 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testcases.PortifolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="quit"/>
+          <include name="createProtifolio"/>
+        </methods>
+      </class> <!-- testcases.PortifolioManagement -->
       <class name="testcases.Session">
         <methods>
           <include name="beforeMethod"/>

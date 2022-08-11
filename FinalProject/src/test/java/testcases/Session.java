@@ -16,8 +16,11 @@ public class Session extends BaseTest
 	  app.navigate("rediffurl");
 	  app.click("signin_xpath");
 	  app.type("useremail_id","rediffuser");
+	  //report failure
+	  app.reportFailure("Test is incorrect...",true);
 	  app.type("userpassword_id","rediffpassword");
 	  app.click("submit_id");
+	  app.assertAll();
   }
   
   @Test
